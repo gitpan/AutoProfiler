@@ -1,0 +1,39 @@
+
+AutoProfiler - Automatically profile subroutine calls in a perl program.
+Copyright (C) 2001  Greg London
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl 5 itself.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+Perl 5 License schemes for more details.
+
+contact the author via http://www.greglondon.com
+
+The AutoProfiler module is completely automatic in its basic mode.
+You simply "use" the module at the top of you main script.
+The module will then automatically instrument all subroutines
+in the code, profile each subroutine call during the execution
+of the script, and print out a report of usage.
+
+To use the AutoProfiler module in your program, just put 
+this one line in your program:
+
+  use AutoProfiler;
+
+everything else will happen automatically.
+
+If you use a module that you do not want profiled, 
+"use" that module before you "use" the AutoProfiler module. i.e.
+
+  use DoNotProfile;
+
+  use AutoProfiler;
+
+  use ThisModuleWillGetProfiled;
+
+When the program has completed, the AutoProfiler will automatically
+print out information about every subroutine that was profiled.
+
